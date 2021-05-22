@@ -1,7 +1,10 @@
-var GuestName = document.getElementById("name1").nodeValue;
-names_of_people.push(GuestName);
-names_of_people.sort();
+names_of_people = [];
 
+function submit(){
+    var GuestName = document.getElementById("name_1").value;
+names_of_people.push(GuestName);
+document.getElementById("display_name").innerHTML=names_of_people;
+}
 function searching()
 {
     var  s= document.getElementById("s1").value;
@@ -14,5 +17,12 @@ function searching()
  found=found+1;
 
 }
+}
 document.getElementById("p2").innerHTML="name found "+found+" time/s";
 console.log("found name "+found+" time/s");
+}
+
+function sorting(){
+    names_of_people.sort();
+    document.getElementById("sorted_list").innerHTML=names_of_people;
+}
